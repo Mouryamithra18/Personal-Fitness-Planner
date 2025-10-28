@@ -36,26 +36,26 @@ def generate_diet_plan(plan_type: str, user_input: dict, calories_target: int) -
         if pt == "weight_loss":
             cal = max(1200, int(calories_target * 0.85))
             meals[day] = [
-                {"meal": "Breakfast", "cal": int(cal * 0.25), "suggestion": "Oatmeal with berries and a boiled egg"},
-                {"meal": "Lunch", "cal": int(cal * 0.35), "suggestion": "Grilled chicken salad with mixed greens"},
-                {"meal": "Dinner", "cal": int(cal * 0.30), "suggestion": "Steamed fish with vegetables"},
-                {"meal": "Snack", "cal": int(cal * 0.10), "suggestion": "Greek yogurt or a small handful of nuts"}
+                {"meal": "Breakfast", "cal": int(cal * 0.25), "suggestion": "Poha or vegetable upma with a cup of tea (without sugar)"},
+                {"meal": "Lunch", "cal": int(cal * 0.35), "suggestion": "Dal, a small portion of brown rice or 2 rotis, and a mixed vegetable sabzi"},
+                {"meal": "Dinner", "cal": int(cal * 0.30), "suggestion": "Grilled paneer or fish with steamed vegetables and a salad"},
+                {"meal": "Snack", "cal": int(cal * 0.10), "suggestion": "Buttermilk (chaas) or roasted chana"}
             ]
         elif pt == "strength" or pt == "muscle_gain":
             cal = int(calories_target * 1.1)
             meals[day] = [
-                {"meal": "Breakfast", "cal": int(cal * 0.25), "suggestion": "Scrambled eggs, wholegrain toast, banana"},
-                {"meal": "Lunch", "cal": int(cal * 0.30), "suggestion": "Quinoa bowl with chicken and veggies"},
-                {"meal": "Dinner", "cal": int(cal * 0.30), "suggestion": "Beef or tofu stir-fry with brown rice"},
-                {"meal": "Snack", "cal": int(cal * 0.15), "suggestion": "Protein shake or cottage cheese"}
+                {"meal": "Breakfast", "cal": int(cal * 0.25), "suggestion": "Besan chilla or paneer bhurji with wholegrain roti"},
+                {"meal": "Lunch", "cal": int(cal * 0.30), "suggestion": "Chicken curry or rajma/chole with brown rice and a side salad"},
+                {"meal": "Dinner", "cal": int(cal * 0.30), "suggestion": "Grilled fish or tofu with dal and 2 rotis"},
+                {"meal": "Snack", "cal": int(cal * 0.15), "suggestion": "Protein-rich snack: boiled eggs, sprouted moong salad, or paneer cubes"}
             ]
         else:
             cal = int(calories_target)
             meals[day] = [
-                {"meal": "Breakfast", "cal": int(cal * 0.25), "suggestion": "Greek yogurt with granola and fruit"},
-                {"meal": "Lunch", "cal": int(cal * 0.30), "suggestion": "Turkey sandwich and salad"},
-                {"meal": "Dinner", "cal": int(cal * 0.30), "suggestion": "Grilled salmon with quinoa and veggies"},
-                {"meal": "Snack", "cal": int(cal * 0.15), "suggestion": "Fruit or a small handful of nuts"}
+                {"meal": "Breakfast", "cal": int(cal * 0.25), "suggestion": "Curd with fruit and a small portion of poha or idli"},
+                {"meal": "Lunch", "cal": int(cal * 0.30), "suggestion": "Mixed veg sabzi, dal, 1-2 rotis and a small bowl of rice"},
+                {"meal": "Dinner", "cal": int(cal * 0.30), "suggestion": "Light curry (e.g., matar paneer or vegetable korma) with 2 rotis"},
+                {"meal": "Snack", "cal": int(cal * 0.15), "suggestion": "Fruit, roasted peanuts, or a small bowl of sprouts"}
             ]
 
     return {"plan_type": pt, "calories_target": calories_target, "meals": meals}
